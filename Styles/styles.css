@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: center;
     visibility: collapse;
+    flex-wrap: wrap;
   }
   
   .section-style {

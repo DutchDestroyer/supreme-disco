@@ -1,27 +1,21 @@
 document.getElementById('date').innerHTML = new Date().toDateString();
 
-var a = 1;
+var counter = 1;
 var isDone = false;
 setInterval(() => {
-    a+=1;
-    document.getElementById('countDown').innerHTML = a;
+    counter+=1;
+    document.getElementById('countDown').innerHTML = counter;
 
-    if(a > 100 && !isDone)
+    if(counter > 100 && !isDone)
     {
         isDone = true;
-        setPicturesToVisible();
+        changeElementStyleOfClass('image-section', "visibility: visible;");
     }
-    if(a % 100 == 0){
-        addElement(a);
+    if(counter % 100 == 0){
+        addElement(counter);
     }
 }, 50);
 
-function setPicturesToVisible(){
-    var elems = document.getElementsByClassName('image-section');
-    
-    for(i = 0; i < elems.length; i++){
-        elems[i].style = "visibility: visible;"
-    }
-}
+
 
 
